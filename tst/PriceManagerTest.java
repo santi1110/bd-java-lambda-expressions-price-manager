@@ -1,5 +1,3 @@
-package com.amazon.ata.lambdaexpressions.prework.function;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

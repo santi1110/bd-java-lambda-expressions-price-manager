@@ -1,9 +1,5 @@
 ### Functional interfaces with lambda expressions Pre-work
 
-**Branch Name:** lambdaexpressions-prework
-
-RDE workflow: `lambdaexpressions-prework-function-pricemanagertest`
-
 Expected time required: 20 min
 
 In this scenario, you are modifying an application that processes prices of items and applies taxes and fees. You will

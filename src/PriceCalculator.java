@@ -1,5 +1,3 @@
-package com.amazon.ata.lambdaexpressions.prework.function;
-
 import java.math.BigDecimal;
 
 import java.util.ArrayList;
