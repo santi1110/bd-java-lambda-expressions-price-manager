@@ -50,10 +50,13 @@ public class PriceManager {
      * @return List of new prices calculated
      */
     public List<BigDecimal> calculateStateTotalPrices(List<BigDecimal> prices, BigDecimal salesTax) {
+
+        PriceCalculator calculator = new PriceCalculator();
+
         // TODO Call PriceCalculator's method calculateTotalPrices by giving an argument that is a lambda expression
         //  implementing the Function interface. Alter the return statement to return the total prices calculated. Refer
         //  to the README for assistance in calculating the prices correctly.
-        return prices;
+        return calculator.calculateTotalPrices(prices, price-> price.multiply(salesTax));
     }
 
     /**
@@ -65,10 +68,12 @@ public class PriceManager {
      */
     public List<BigDecimal> calculateStateTotalPrices(List<BigDecimal> prices, BigDecimal setupFee, BigDecimal
             salesTax) {
+        PriceCalculator calculator = new PriceCalculator();
+
         // TODO Call PriceCalculator's method calculateTotalPrices by giving an argument that is a lambda expression
         //  implementing the Function interface. Alter the return statement to return the total prices calculated. Refer
         //  to the README for assistance in calculating the prices correctly.
-        return prices;
+        return calculator.calculateTotalPrices(prices, price->price.add(setupFee).multiply(salesTax));
     }
 
     /**
@@ -81,9 +86,11 @@ public class PriceManager {
      */
     public List<BigDecimal> calculateStateTotalPrices(List<BigDecimal> prices, BigDecimal setupFee, BigDecimal salesFee,
                                                  BigDecimal countyFee) {
+
+        PriceCalculator calculator = new PriceCalculator();
         // TODO Call PriceCalculator's method calculateTotalPrices by giving an argument that is a lambda expression
         //  implementing the Function interface. Alter the return statement to return the total prices calculated. Refer
         //  to the README for assistance in calculating the prices correctly.
-        return prices;
+        return calculator.calculateTotalPrices(prices,price -> price.add(setupFee).add(salesFee).add(countyFee));
     }
 }

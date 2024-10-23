@@ -22,6 +22,10 @@ public class PriceCalculator {
     public List<BigDecimal> calculateTotalPrices(List<BigDecimal> prices,
                                                  Function<BigDecimal, BigDecimal> priceComputer) {
         List<BigDecimal> newPrices = new ArrayList<>();
+
+        for (BigDecimal price : prices){
+            newPrices.add(priceComputer.apply(price));
+        }
         // TODO Iterate through prices, use priceComputer to return a new price and add it to newPrices
 
         return newPrices;
